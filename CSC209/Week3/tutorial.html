@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+</head>
+<body>
+    <h2>My First JavaScript</h2>
+
+    <button type="button"
+    onclick="document.getElementById('date').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+
+    <p id="date"></p>
+
+    <h1>JavaScript Functions</h1>
+
+    <p>Call a function which performs a calculation and returns the result:</p>
+
+    <p id="calc"></p>
+
+    <p id="temp"></p>
+
+    <h1>JavaScript Objects</h1>
+
+    <p id="object"></p>
+
+    <h1>Javascript Object Constructor</h1>
+
+    <p id="constructor"></p>
+
+    <h1>JavaScript Methods</h1>
+
+    <p>The charAt() method returns the character at a given position in a string:</p>
+
+    <p id="methods"></p>
+
+    <h1>JavaScript Strings</h1>
+    <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+    <p id="strings"></p>
+
+    <h1>The Arrow Function</h1>
+
+    <p>This example shows an Arrow Function without the brackets or the return keyword.</p>
+
+    <p id="arrow"></p>
+
+    <h1>DOM CSS</h1>
+    <h1 id="id1">My Heading 1</h1>
+
+    <button type="button" 
+    onclick="document.getElementById('id1').style.color = 'red'">
+    Click Me!</button>
+
+    <h1>DOM Events</h1>
+
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+    style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+    Click Me</div>
+
+    <script>
+    //functions 
+    let x = myFunction(4, 3);
+    document.getElementById("calc").innerHTML = x;
+
+    function myFunction(a, b) {
+    return a * b;
+    }
+
+    let text = "The temperature is " + toCelsius(77) + " Celsius.";
+    document.getElementById("temp").innerHTML = text;
+
+    function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+    } 
+
+    // Create an Object
+    const person = new Object();
+    person.firstName = "John";
+    person.lastName = "Doe";
+    person.age = 50;
+    person.eyeColor = "blue"; 
+
+    // Display Object Content
+    document.getElementById("object").innerHTML =
+    person.firstName + " is " + person.age + " years old.";
+
+    //Object Constructor
+
+    // Constructor Function for Person objects
+    function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    }
+
+    // Create a Person object
+    const myFather = new Person("John", "Doe", 50, "blue");
+
+    // Display age
+    document.getElementById("constructor").innerHTML =
+    "My father is " + myFather.age + "."; 
+
+    //Methods
+
+    var textM = "HELLO WORLD";
+    document.getElementById("methods").innerHTML = textM.charAt(0);
+
+
+    let answer1 = "It's alright";
+    let answer2 = "He is called 'Johnny'";
+    let answer3 = 'He is called "Johnny"'; 
+
+    document.getElementById("strings").innerHTML =
+    answer1 + "<br>" + answer2 + "<br>" + answer3;
+
+
+    // JS Arrow Functions
+    let hello = "";
+
+    hello = () => "Hello World!";
+
+    document.getElementById("arrow").innerHTML = hello();
+
+    //On mouseup / on mousedown
+
+
+    function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+    }
+
+    function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerHTML="Thank You";
+    }
+
+    </script>
+
+    
+
+
+
+</body>
+</html>
