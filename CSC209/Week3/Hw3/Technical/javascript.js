@@ -4,9 +4,6 @@ let slideLength = 3
 function newSlide(){
     for (let i=0; i < 3; i++){
 
-
-        console.log(`hello ${i}`);
-
         let mySlides = document.createElement("div");
         mySlides.classList.add("mySlides", "fade");
 
