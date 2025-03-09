@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Vectors</title>
+    <link rel="stylesheet" type="text/css" href="./css/technical.css" />
+
+</head>
+<body>
+    <div class="options">
+        <div class="buttons">
+            <button id="random-positions">Randomize Positions</button>
+            <button id="move-circles">Move circles</button>
+            <button id="reset">Reset Positions</button>
+        </div>
+
+        <div class="more-buttons">
+            <label for="num-of-circles">Number of circles (1-10)</label>
+            <input type="number" id="num-of-circles" name="num-of-circles" value="1" min="1" max="10" />
+
+            <label for="trace">Check for trace:</label> 
+            <input type="checkbox" id="trace">
+
+            <label for="temp">Choose a temperature:</label>
+
+            <select name="temp" id="temp" value="hot">
+              <option value="hot">Hot</option>
+              <option value="warm">Warm</option>
+              <option value="cold">Cold</option>
+            </select> 
+        </div>
+    </div>
+
+
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
+        Sorry, your browser does not support canvas.
+     </canvas>
+
+
+    <script src="./js/javascript.js"></script>
+</body>
+</html>
